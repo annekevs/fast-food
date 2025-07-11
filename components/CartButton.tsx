@@ -1,8 +1,8 @@
 import { images } from "@/constants";
 import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
-const CardButton = () => {
+const CartButton = () => {
   const totalItems = 10;
   return (
     <TouchableOpacity className={"cart-btn"} onPress={() => {}}>
@@ -16,12 +16,4 @@ const CardButton = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
-
-export default CardButton;
+export default CartButton;
