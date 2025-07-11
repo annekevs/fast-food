@@ -25,5 +25,14 @@ export default function RootLayout() {
 
   if (!fontsLoaded || isLoading) return null;
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        statusBarHidden: false,
+        statusBarStyle: "dark",
+        navigationBarHidden: false,
+      }}
+    />
+  );
 }

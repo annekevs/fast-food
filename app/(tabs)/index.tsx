@@ -2,6 +2,7 @@ import CartButton from "@/components/CartButton";
 import { images, offers } from "@/constants";
 import useAuthStore from "@/store/auth.store";
 import cn from "clsx";
+import { router } from "expo-router";
 import { Fragment } from "react";
 import {
   FlatList,
@@ -18,7 +19,7 @@ export default function Index() {
 
   //console.log("user: ", JSON.stringify(user, null, 2));
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView className="flex-1">
       <FlatList
         data={offers}
         renderItem={({ item, index }) => {
@@ -33,6 +34,7 @@ export default function Index() {
                 )}
                 style={{ backgroundColor: item.color }}
                 android_ripple={{ color: "#fffff22" }}
+                onPress={() => router.setParams({ category: item.id })}
               >
                 {({ pressed }) => (
                   <Fragment>
